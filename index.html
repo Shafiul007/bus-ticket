@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="px-2 py-2 lg:px-[100px]">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li>
+                    <a>About</a>
+                    
+                  </li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="font-bold text-3xl">Ena-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                  <li>
+                    <a>About</a>
+                    
+                  </li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn text-xl font-bold border-green-400 border-[1px] text-green-400 bg-green-100">Bus <img src="./bus-icon.png" alt=""></a>
+            </div>
+          </div>
+    </header>
+    <main class="px-2 lg:px-[100px]">
+        <section class="rounded-3xl bg-white text-center flex justify-center items-center flex-col mb-[20px]">
+            <div class="hero min-h-[38vw] rounded-3xl "  style="background-image: url(./banner.png);">
+                <div class="hero-overlay bg-opacity-5 bg-white"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-4xl font-extrabold">End-To-End Travel With <br>
+                    <span class="text-green-400">Ena-Paribahan</span></h1>
+                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                    <a href="#" class="btn btn-primary bg-green-600 font-bold text-black border-none">Buy Tickets</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex lg:w-full w-1/2 flex-col lg:flex-row lg:px-[100px] px-1 justify-around mt-3 lg:translate-y-[-70%]">
+                <div class="flex text-center  lg:flex-row gap-2  rounded-2xl border-b-[2px] border-green-400 bg-white p-3">
+                    <img src="./people.png" alt="">
+                    <div class="flex flex-col gap-3"><h1 class="text-2xl font-bold text-black">500k+</h1>
+                    <p>Registered users</p></div>
+                </div>
+                <div class="flex flex-row gap-2 p-3  rounded-2xl border-b-[2px] border-green-400 bg-white">
+                    <img src="./ticket-cupon.png" alt="">
+                    <div class="flex flex-col gap-3"><h1 class="text-2xl font-bold text-black">500k+</h1>
+                    <p>Registered users</p></div>
+                </div>
+                <div class="flex flex-row gap-2 p-3  rounded-2xl border-b-[2px] border-green-400 bg-white">
+                    <img src="./stoppage.png" alt="">
+                    <div class="flex flex-col gap-3"><h1 class="text-2xl font-bold text-black">500k+</h1>
+                    <p>Registered users</p></div>
+                </div>
+              </div>
+        </section>
+
+        <!-- offer section  -->
+        <section class="flex py-[20px]  flex-col justify-center items-center">
+            <h1 class="text-center text-4xl font-bold mb-[15px] lg:mb-[30px]">Best offers for you</h1>
+            <div class="flex flex-col lg:flex-row gap-[25px]">
+                <div class="bg-yellow-300 rounded-3xl gap-[20px] p-[15px] lg:p-[30px] flex-row flex items-center justify-center">
+                    <div class="space-y-[4px] p-[15px] border-r-[2px] border-dashed border-gray-400">
+                        <h1 class="text-3xl font-bold text-black">15% OFF</h1>
+                        <h1 class="text-xl font-medium text-black">on your next purchase</h1>
+                        <h1 class="text-slate-800">use by January 2024</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">NEW15</h1>
+                        <h1>Coupon Code</h1>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-300 gap-[20px] rounded-3xl p-[15px] lg:p-[30px] flex-row flex items-center justify-center">
+                    <div class="space-y-[4px] p-[15px] border-r-[2px] border-dashed border-gray-400">
+                        <h1 class="text-3xl font-bold text-black">20% OFF</h1>
+                        <h1 class="text-xl font-medium text-black">on your next purchase</h1>
+                        <h1 class="text-slate-800">use by January 2024</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">Couple20</h1>
+                        <h1>Coupon Code</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="lg:p-[100px] p-2 bg-black">
+        <footer class="footer text-white flex lg:flex-row flex-col lg:justify-between text-base-content mb-5">
+            <nav class="">
+              <h6 class="text-3xl font-bold ">Ena-Ticket</h6> 
+              <p class="text-slate-400">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+            </nav> 
+            <nav class="flex flex-col gap-3">
+              <h6 class="text-2xl font-lg">Download our app</h6> 
+              <div class="flex flex-row gap-3 p-2 border-[1px] border-base-200 rounded-xl">
+                <img src="./playstore.png" width="40px" alt="">
+                <div>
+                    <h1 class="text-lg font-normal">Get it on</h1>
+                    <h1 class="text-2xl font-medium"> Google Play</h1>
+                </div>
+              </div>
+              
+              
+            </nav> 
+            
+          </footer> 
+          <footer class="footer px-10 py-[20px] border-t border-dashed text-white text-base-content border-gray-500">
+            <aside class="items-center ">
+              <p class="text-gray-500">@all rights reserved, P-Ticket services limited.2024</p>
+            </aside> 
+            <nav class="md:place-self-center md:justify-self-end">
+              <div class="grid grid-flow-col gap-4">
+               <h1 class="text-slate-200">Terms & condition</h1>
+               <h1 class="text-slate-200">Return & refund policy</h1>
+               <h1 class="text-slate-200">Privacy policy</h1>
+              </div>
+            </nav>
+          </footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
