@@ -6,6 +6,9 @@ let totalMoney=document.getElementById("ul3");
 let chooseSeat=0;
 let seatAvailable=document.getElementById("seat-avail");
 let seatAv=parseInt(seatAvailable.innerText);
+let sit=document.getElementById("seat-select");
+let seatSelect=parseInt(sit.innerText);
+console.log(seatSelect);
 console.log(seatAv);
 for (const seat of seats){
     seat.addEventListener("click", function(){
@@ -14,6 +17,8 @@ for (const seat of seats){
             alert("you can't choose more than 4 seat");
         }
        else{
+        seatSelect++;
+        sit.innerText=seatSelect;
         seatAv--;
         console.log(seatAv);
         seatAvailable.innerText=seatAv;
@@ -54,6 +59,14 @@ for (const seat of seats){
        
 
     })
+}
+function next(){
+    document.getElementById("selling").classList.add("hidden");
+    document.getElementById("success").classList.remove("hidden");
+}
+function previus(){
+    document.getElementById("selling").classList.remove("hidden");
+    document.getElementById("success").classList.add("hidden");
 }
 
 
