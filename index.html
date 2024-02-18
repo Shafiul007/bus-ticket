@@ -286,10 +286,10 @@
                   <hr class="border-[1px] border-gray-400 border-solid">
                   <div class="flex flex-row justify-between">
                     <h1 class="font-bold text-xl text-black">Total Price</h1>
-                    <h1 class="font-bold text-xl text-black">BDT<span id="total-price"> 0</span></h1>
+                    <h1 class="font-bold text-xl text-black">BDT <span id="total-price"> 0</span></h1>
                   </div>
-                  <div class="bg-white px-[8px] py-[2px] rounded-xl flex flex-row justify-between">
-                    <input id="apply-btn" placeholder="Have any coupon?" type="text">
+                  <div id="discount" class="bg-white px-[8px] py-[2px] rounded-xl flex flex-row justify-between">
+                    <input id="coupon-code" placeholder="Have any coupon?" type="text">
                     <button class="btn bg-green-500 text-xl text-white" id="apply">Apply</button>
                   </div>
                   <div class="flex flex-row justify-between">
@@ -311,7 +311,7 @@
                   <h1 class="text-xl font-bold text-black text-left">Email Id :</h1>
                   <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your Email" type="email">
                 </div>
-                <input id="btn1" onclick="next()" type="button" value="Submit" class="btn text-white font-bold text-xl w-full bg-green-600 ">
+                <button id="btn1" onclick="next()" type="button" value="Submit" class="btn disabled text-white font-bold text-xl w-full bg-green-600 ">Submit</button>
                 <div class="flex justify-around">
                   <p class="underline">Terms and Conditions</p>
                   <p class="underline">Cancellation Policy</p>
@@ -330,7 +330,7 @@
             <h1 class="text-lg text-black font-medium"> We are working hard to find the best service and deals for you.</h1>
           </div>
           <h1 class="text-xl text-slate-500">Shortly you will find a confirmation in your email.</h1>
-          <button id="btn2" onclick="previus()" class="btn bg-green-500 w-1/4 rounded-3xl text-white text-2xl font-medium">Continue</button>
+          <button id="btn2" onclick="previus()" class="btn bg-green-500 w-1/2 lg:w-1/4 rounded-3xl text-white text-xl lg:text-2xl font-medium">Continue</button>
           
         </div>
     </main>
