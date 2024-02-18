@@ -8,14 +8,16 @@ let seatAvailable=document.getElementById("seat-avail");
 let seatAv=parseInt(seatAvailable.innerText);
 let sit=document.getElementById("seat-select");
 let seatSelect=parseInt(sit.innerText);
-console.log(seatSelect);
-console.log(seatAv);
 const apply=document.getElementById("apply");
 const coupon=document.getElementById("coupon-code");
 let sum=0;
 let totalPrice=document.getElementById("total-price");
 let grandTotal=document.getElementById("grand-total");
 let disc=document.getElementById("discount");
+const email=document.getElementById("email");
+const name=document.getElementById("name");
+const number=document.getElementById("number");
+let count=0;
 for (const seat of seats){
     seat.addEventListener("click", function(){
         chooseSeat++;
@@ -26,9 +28,7 @@ for (const seat of seats){
         seatSelect++;
         sit.innerText=seatSelect;
         seatAv--;
-        console.log(seatAv);
         seatAvailable.innerText=seatAv;
-        console.log(seat.innerText);
         seat.style.backgroundColor ="green";
         let li=document.createElement("li");
         li.innerText=seat.innerText;
@@ -40,16 +40,17 @@ for (const seat of seats){
         ul1.appendChild(li);
         ul2.appendChild(li1);
         ul3.appendChild(li2); 
+        count++;
+        
+        
         for (let money of totalMoney.children){
-            console.log(money.innerText);
-            let amount =parseInt(money.innerText);
-            console.log(typeof amount);
-            sum += amount;
+            sum=550*count;
             console.log(sum);
         }
         totalPrice.innerText=sum;
         const disc=grandTotal*0.15;
         let grandPrice=grandTotal.innerText.toLowerCase();
+        grandTotal.innerText=sum;
     
        }
        
@@ -68,10 +69,7 @@ for (const seat of seats){
         else{
             grandTotal.innerText=sum;
             disc.innerText="Discount : "+sum*0;
-            
         }
-                
-                console.log(grandTotal.innerText);
             })
         // if (code==="new15"){
         //     apply.addEventListener("click",function(){
@@ -99,11 +97,11 @@ for (const seat of seats){
     })
 }
 function next(){
-    document.getElementById("selling").classList.add("hidden");
+    document.getElementById("buyTicket").classList.add("hidden");
     document.getElementById("success").classList.remove("hidden");
 }
 function previus(){
-    document.getElementById("selling").classList.remove("hidden");
+    document.getElementById("buyTicket").classList.remove("hidden");
     document.getElementById("success").classList.add("hidden");
 }
 

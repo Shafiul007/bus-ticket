@@ -93,8 +93,8 @@
                             <h1>Coupon Code</h1>
                         </div>
                     </div>
-                    <div class="bg-pink-400 gap-[20px] rounded-3xl  flex-row flex items-center justify-center">
-                        <div class="p-[15px] lg:p-[30px] space-y-[4px] border-gray-400">
+                    <div class="bg-pink-400 gap-[20px] rounded-3xl  flex-row flex">
+                        <div class="p-[15px] lg:p-[30px] space-y-[4px] border-gray-400 flex flex-col justify-center">
                             <h1 class="text-3xl font-bold text-black">20% OFF</h1>
                             <h1 class="text-lg font-medium text-black">on your next purchase</h1>
                             <h1 class="text-slate-800">use by January 2024</h1>
@@ -301,17 +301,17 @@
                 <!-- passenger information  -->
                 <div class="mt-[20px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Passenger Name :</h1>
-                  <input required class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black"  placeholder="Enter Your Name" type="text">
+                  <input id="name" required class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black"  placeholder="Enter Your Name" type="text">
                 </div>
                 <div class=" mt-[15px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Phone Number :</h1>
-                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your phone" type="number">
+                  <input id="number" class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your phone" type="number">
                 </div>
                 <div class="mt-[15px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Email Id :</h1>
-                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your Email" type="email">
+                  <input id="email" class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your Email" type="email">
                 </div>
-                <button id="btn1" onclick="next()" type="button" value="Submit" class="btn disabled text-white font-bold text-xl w-full bg-green-600 ">Submit</button>
+                <button id="btn1" onclick="next()" type="button" value="Submit" class="btn text-white font-bold text-xl w-full bg-green-600 ">Submit</button>
                 <div class="flex justify-around">
                   <p class="underline">Terms and Conditions</p>
                   <p class="underline">Cancellation Policy</p>
