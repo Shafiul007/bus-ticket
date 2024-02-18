@@ -4,6 +4,9 @@ const ul2=document.getElementById("ul2");
 const ul3=document.getElementById("ul3");
 let totalMoney=document.getElementById("ul3");
 let chooseSeat=0;
+let seatAvailable=document.getElementById("seat-avail");
+let seatAv=parseInt(seatAvailable.innerText);
+console.log(seatAv);
 for (const seat of seats){
     seat.addEventListener("click", function(){
         chooseSeat++;
@@ -11,6 +14,9 @@ for (const seat of seats){
             alert("you can't choose more than 4 seat");
         }
        else{
+        seatAv--;
+        console.log(seatAv);
+        seatAvailable.innerText=seatAv;
         console.log(seat.innerText);
         seat.style.backgroundColor ="green";
         let li=document.createElement("li");
@@ -24,6 +30,7 @@ for (const seat of seats){
         ul2.appendChild(li1);
         ul3.appendChild(li2);
         let totalPrice=document.getElementById("total-price");
+        let grandTotal=document.getElementById("grand-total");
         let sum=0;
         for (let money of totalMoney.children){
             console.log(money.innerText);
@@ -33,7 +40,20 @@ for (const seat of seats){
             console.log(sum);
         }
         totalPrice.innerText=sum;
+        const disc=grandTotal*0.80;
+        grandTotal.innerText=sum;
        }
+       const apply=document.getElementById("apply");
+       apply.addEventListener("click",function(){
+        if (coupon.value==="couple20" || coupon.value==="new15"){
+
+        }
+       })
+       const coupon=document.getElementById("coupon-code");
+      
+       
+
     })
 }
+
 

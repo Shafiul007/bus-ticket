@@ -133,7 +133,7 @@
                     <!-- right part -->
                     <div class="flex flex-row gap-[8px] btn text-green-400 bg-green-100 ">
                       <img src="./seat-green.png" alt="">
-                      <h1><span>40</span> seats available</h1>
+                      <h1><span id="seat-avail">40</span> seats available</h1>
                     </div>
                   </div>
 
@@ -289,8 +289,8 @@
                     <h1 class="font-bold text-xl text-black">BDT<span id="total-price"> 0</span></h1>
                   </div>
                   <div class="bg-white px-[8px] py-[2px] rounded-xl">
-                    <input placeholder="Have any coupon?" type="text">
-                    <button onclick="success()" class="btn bg-green-500 text-xl text-white">Apply</button>
+                    <input id="apply-btn" placeholder="Have any coupon?" type="text">
+                    <button class="btn bg-green-500 text-xl text-white" id="apply">Apply</button>
                   </div>
                   <div class="flex flex-row justify-between">
                     <h1 class="text-xl font-bold">Grand Total</h1>
@@ -301,17 +301,17 @@
                 <!-- passenger information  -->
                 <div class="mt-[20px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Passenger Name :</h1>
-                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-white" required placeholder="Enter Your Name" type="text">
+                  <input required class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black"  placeholder="Enter Your Name" type="text">
                 </div>
                 <div class=" mt-[15px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Phone Number :</h1>
-                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-white" required placeholder="Enter Your phone" type="number">
+                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your phone" type="number">
                 </div>
                 <div class="mt-[15px] space-y-[10px]">
                   <h1 class="text-xl font-bold text-black text-left">Email Id :</h1>
-                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-white" required placeholder="Enter Your Email" type="email">
+                  <input class="p-[10px] w-full border-[1px] border-gray-400 rounded-lg text-black" required placeholder="Enter Your Email" type="email">
                 </div>
-                <input type="button" value="submit" class="btn text-white font-bold text-xl w-full bg-green-600 ">
+                <input type="button" value="Submit" class="btn text-white font-bold text-xl w-full bg-green-600 ">
                 <div class="flex justify-around">
                   <p class="underline">Terms and Conditions</p>
                   <p class="underline">Cancellation Policy</p>
