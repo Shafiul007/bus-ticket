@@ -54,7 +54,7 @@ apply.addEventListener("click",function(){
     if (input==="couple20"){
         grandTotal.innerText=sum*0.80;
         let discountAmount=sum-grandTotal.innerText;
-        discount.innerText=discountAmount;
+        discount.innerText="Discount : "+discountAmount;
         document.getElementById("input-field").value="";
         console.log(sum);
         console.log(input);
@@ -63,7 +63,7 @@ apply.addEventListener("click",function(){
     else if(input==="new15"){
         grandTotal.innerText=sum*0.85;
         let discountAmount=sum-grandTotal.innerText;
-        discount.innerText=discountAmount;
+        discount.innerText="Discount : "+discountAmount;
         document.getElementById("input-field").value="";
         console.log("matching coupon 2")
         console.log(input);
@@ -71,7 +71,7 @@ apply.addEventListener("click",function(){
     }
     else{
         let discountAmount=sum-grandTotal.innerText;
-        discount.innerText=discountAmount;
+        discount.innerText="Discount : "+discountAmount;
         document.getElementById("input-field").value="";
         console.log("no matching coupon")
         console.log(input);
@@ -98,7 +98,6 @@ btn1.addEventListener("click",function(){
         document.getElementById("success").classList.remove("hidden");
     }
 })
-
 function previus(){
     document.getElementById("selling").classList.remove("hidden");
     document.getElementById("sec2").classList.remove("hidden");
