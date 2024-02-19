@@ -108,7 +108,7 @@ function previus(){
     name.value="";
     number.value="";
     email.value="";
-    
+    seats.childNode.classList.remove("clicked");
 
     
 
