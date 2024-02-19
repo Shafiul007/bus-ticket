@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="px-2 py-2 lg:px-[100px]">
+    <header id="head" class="px-2 py-2 lg:px-[100px]">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
@@ -26,7 +26,7 @@
                   <li><a>Search</a></li>
                 </ul>
               </div>
-              <a class="font-bold text-3xl">Ena-Ticket</a>
+              <a class="font-bold text-2xl lg:text-3xl">Ena-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -45,7 +45,7 @@
           </div>
     </header>
     <main class="">
-        <section class="rounded-3xl lg:px-[100px] px-2 py-3 bg-white text-center flex justify-center items-center flex-col mb-[20px]">
+        <section id="sec1" class="rounded-3xl lg:px-[100px] px-2 py-3 bg-white text-center flex justify-center items-center flex-col mb-[20px]">
             <div class="hero min-h-[38vw] rounded-3xl "  style="background-image: url(./banner.png);">
                 <div class="hero-overlay bg-opacity-5 bg-white"></div>
                 <div class="hero-content text-center text-neutral-content">
@@ -77,7 +77,7 @@
         </section>
 
         <!-- offer section  -->
-        <section class="flex py-[20px] border-t-[2px] border-green-400 rounded-[100px] lg:px-[100px] px-2  flex-col justify-center items-center">
+        <section id="sec2" class="flex py-[20px] border-t-[2px] border-green-400 rounded-[100px] lg:px-[100px] px-2  flex-col justify-center items-center">
             <h1 class="text-center text-4xl font-bold mb-[15px] lg:mb-[30px]">Best offers for you</h1>
                 <div class="flex flex-col lg:flex-row justify-between gap-[25px] rounded-3xl">
                     
@@ -289,7 +289,7 @@
                     <h1 class="font-bold text-xl text-black">BDT <span id="total-price"> 0</span></h1>
                   </div>
                   <div id="discount" class="bg-white px-[8px] py-[2px] rounded-xl flex flex-row justify-between">
-                    <input id="coupon-code" placeholder="Have any coupon?" type="text">
+                    <input id="input-field" placeholder="Have any coupon?" type="text">
                     <button class="btn bg-green-500 text-xl text-white" id="apply">Apply</button>
                   </div>
                   <div class="flex flex-row justify-between">
@@ -336,7 +336,7 @@
     </main>
 
 
-    <footer class="lg:p-[100px] p-2 bg-black">
+    <footer id="foot" class="lg:p-[100px] p-2 bg-black">
         <footer class="footer text-white flex lg:flex-row flex-col lg:justify-between text-base-content mb-5">
             <nav class="">
               <h6 class="text-3xl font-bold ">Ena Transport-Ticket</h6> 

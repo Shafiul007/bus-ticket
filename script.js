@@ -8,8 +8,6 @@ let seatAvailable=document.getElementById("seat-avail");
 let seatAv=parseInt(seatAvailable.innerText);
 let sit=document.getElementById("seat-select");
 let seatSelect=parseInt(sit.innerText);
-const apply=document.getElementById("apply");
-const coupon=document.getElementById("coupon-code");
 let sum=0;
 let totalPrice=document.getElementById("total-price");
 let grandTotal=document.getElementById("grand-total");
@@ -41,68 +39,55 @@ for (const seat of seats){
         ul2.appendChild(li1);
         ul3.appendChild(li2); 
         count++;
-        
-        
         for (let money of totalMoney.children){
             sum=550*count;
             console.log(sum);
         }
         totalPrice.innerText=sum;
-        const disc=grandTotal*0.15;
-        let grandPrice=grandTotal.innerText.toLowerCase();
         grandTotal.innerText=sum;
-    
        }
-       
-       const code=coupon.value.toLowerCase();
-       apply.addEventListener("click",function(){
-        if (code==="new15"){
-            grandTotal.innerText=sum*0.85;
-            disc.innerText="Discount : "+sum*0.15;
-            
-
-        }
-        else if(code==="couple20"){
-            grandTotal.innerText=sum*0.80;
-            disc.innerText="Discount : "+sum*0.20;
-        }
-        else{
-            grandTotal.innerText=sum;
-            disc.innerText="Discount : "+sum*0;
-        }
-            })
-        // if (code==="new15"){
-        //     apply.addEventListener("click",function(){
-        //         grandTotal.innerText=sum*0.85;
-        //         console.log(grandTotal.innerText);
-        //     })
-        //     console.log("matching1")
-            
-        // }
-        // else if(code==="couple20"){
-        //     console.log("matching2");
-        //     apply.addEventListener("click",function(){
-        //         grandTotal.innerText=sum*0.80;
-
-        // })
-        // }
-        // else{
-        //     console.log("no match")
-        //     apply.addEventListener("click",function(){
-        //         grandTotal.innerText=sum;
-        //         console.log(grandTotal.innerText);
-        //     })
-        // }
-       
     })
 }
+const apply=document.getElementById("apply");
+apply.addEventListener("click",function(){
+    const input=document.getElementById("input-field").value.toLowerCase();
+    if (input==="couple20"){
+        grandTotal.innerText=sum*0.80;
+        let discountAmount=sum-grandTotal.innerText;
+        discount.innerText=discountAmount;
+        console.log(sum);
+        console.log(input);
+       
+    }
+    else if(input==="new15"){
+        grandTotal.innerText=sum*0.85;
+        let discountAmount=sum-grandTotal.innerText;
+        discount.innerText=discountAmount;
+        console.log("matching coupon 2")
+        console.log(input);
+        
+    }
+    else{
+        let discountAmount=sum-grandTotal.innerText;
+        discount.innerText=discountAmount;
+        console.log("no matching coupon")
+        console.log(input);
+    }
+})
 function next(){
-    document.getElementById("buyTicket").classList.add("hidden");
+    document.getElementById("selling").classList.add("hidden");
+    document.getElementById("sec2").classList.add("hidden");
+    document.getElementById("sec1").classList.add("hidden");
+    document.getElementById("head").classList.add("hidden");
+    document.getElementById("foot").classList.add("hidden");
     document.getElementById("success").classList.remove("hidden");
 }
 function previus(){
-    document.getElementById("buyTicket").classList.remove("hidden");
+    document.getElementById("selling").classList.remove("hidden");
+    document.getElementById("sec2").classList.remove("hidden");
+    document.getElementById("sec1").classList.remove("hidden");
+    document.getElementById("head").classList.remove("hidden");
+    document.getElementById("foot").classList.remove("hidden");
     document.getElementById("success").classList.add("hidden");
 }
-
 
