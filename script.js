@@ -55,6 +55,7 @@ apply.addEventListener("click",function(){
         grandTotal.innerText=sum*0.80;
         let discountAmount=sum-grandTotal.innerText;
         discount.innerText=discountAmount;
+        document.getElementById("input-field").value="";
         console.log(sum);
         console.log(input);
        
@@ -63,6 +64,7 @@ apply.addEventListener("click",function(){
         grandTotal.innerText=sum*0.85;
         let discountAmount=sum-grandTotal.innerText;
         discount.innerText=discountAmount;
+        document.getElementById("input-field").value="";
         console.log("matching coupon 2")
         console.log(input);
         
@@ -70,18 +72,33 @@ apply.addEventListener("click",function(){
     else{
         let discountAmount=sum-grandTotal.innerText;
         discount.innerText=discountAmount;
+        document.getElementById("input-field").value="";
         console.log("no matching coupon")
         console.log(input);
     }
 })
-function next(){
-    document.getElementById("selling").classList.add("hidden");
-    document.getElementById("sec2").classList.add("hidden");
-    document.getElementById("sec1").classList.add("hidden");
-    document.getElementById("head").classList.add("hidden");
-    document.getElementById("foot").classList.add("hidden");
-    document.getElementById("success").classList.remove("hidden");
-}
+
+const btn1=document.getElementById("btn1");
+btn1.addEventListener("click",function(){
+    if (count<1){
+        alert("please choose a seat first");
+    }
+    else if(!number.value || number.value.length!==11){
+        alert("please enter a valid number");
+    }
+    else if(!name.value ){
+        alert("please enter a name");
+    }
+    else{
+        document.getElementById("selling").classList.add("hidden");
+        document.getElementById("sec2").classList.add("hidden");
+        document.getElementById("sec1").classList.add("hidden");
+        document.getElementById("head").classList.add("hidden");
+        document.getElementById("foot").classList.add("hidden");
+        document.getElementById("success").classList.remove("hidden");
+    }
+})
+
 function previus(){
     document.getElementById("selling").classList.remove("hidden");
     document.getElementById("sec2").classList.remove("hidden");
