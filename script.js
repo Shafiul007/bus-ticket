@@ -105,5 +105,12 @@ function previus(){
     document.getElementById("head").classList.remove("hidden");
     document.getElementById("foot").classList.remove("hidden");
     document.getElementById("success").classList.add("hidden");
+    name.value="";
+    number.value="";
+    email.value="";
+    
+
+    
+
 }
 
